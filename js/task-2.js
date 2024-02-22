@@ -1,7 +1,10 @@
 'use strict';
 
 class Storage {
-    #items = [];
+    #items;
+    constructor(items = []) {
+    this.#items = items;
+}
     getItems() {
         return this.#items
     }
@@ -14,7 +17,7 @@ class Storage {
         const index = this.#items.indexOf(itemToRemove);
         if (index !== -1) {
             this.#items.splice(index, 1)
-            
+
         }
     }
 }
